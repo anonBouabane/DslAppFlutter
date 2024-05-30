@@ -1,4 +1,3 @@
-import 'package:dslsale/util/images.dart';
 import 'package:dslsale/util/textstyle.dart';
 import 'package:flutter/material.dart';
 
@@ -29,157 +28,272 @@ class _ProfileScreenState extends State<ProfileScreen> {
           style: textTitlewhite,
         ),
       ),
-      body: Stack(
-        children: [
-          SizedBox(
-              height: double.infinity,
-              width: double.infinity,
-              child: Image.asset(
-                Images.background1,
-                fit: BoxFit.cover,
-              )),
-          SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-              child: Column(
-                children: [
-                  Center(
-                      child: ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: Image.asset(Images.elon),
-                  )),
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                            height: 100,
-                            child: Card(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Row(
+      body: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    SizedBox(
+                        height: 100,
+                        child: Card(
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
-                                      "ຊື່ : ອີ່ລອນ",
-                                      style: textTitleGrey,
+                                      "Name ",
+                                      style: textSimple,
                                     ),
-                                    Spacer(),
-                                    Icon(
-                                      Icons.edit,
-                                      color: Colors.blueGrey,
+                                    Text(
+                                      "anon bouaban",
+                                      style: textTitle,
                                     )
                                   ],
                                 ),
-                              ),
-                            )),
+                                Spacer(),
+                                Icon(
+                                  Icons.edit,
+                                  color: Colors.blueGrey,
+                                )
+                              ],
+                            ),
+                          ),
+                        )),
                         SizedBox(
-                            height: 100,
-                            child: Card(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Row(
+                        height: 100,
+                        child: Card(
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "ອາຍຸ : 21",
-                                      style: textTitleGrey,
+                                      "ເພດ  ",
+                                      style: textSimple,
                                     ),
-                                    Spacer(),
-                                    Icon(
-                                      Icons.edit,
-                                      color: Colors.blueGrey,
+                                    Text(
+                                      "ຊາຍ",
+                                      style: textTitle,
                                     )
                                   ],
                                 ),
-                              ),
-                            )),
-                        SizedBox(
-                            height: 100,
-                            child: Card(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Row(
+                                Spacer(),
+                                Icon(
+                                  Icons.edit,
+                                  color: Colors.blueGrey,
+                                )
+                              ],
+                            ),
+                            
+                          ),
+                        )),
+                    SizedBox(
+                        height: 100,
+                        child: Card(
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "ເບີໂທ : 2077995490",
-                                      style: textTitleGrey,
+                                      "ອາຍຸ  ",
+                                      style: textSimple,
                                     ),
-                                    Spacer(),
-                                    Icon(
-                                      Icons.edit,
-                                      color: Colors.blueGrey,
+                                    Text(
+                                      "21 ປີ",
+                                      style: textTitle,
                                     )
                                   ],
                                 ),
-                              ),
-                            )),
+                                Spacer(),
+                                Icon(
+                                  Icons.edit,
+                                  color: Colors.blueGrey,
+                                )
+                              ],
+                            ),
+                            
+                          ),
+                        )),
                         SizedBox(
-                            height: 100,
-                            child: Card(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Row(
+                        height: 100,
+                        child: Card(
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "ບ້ານ : ໂພນສະຫວາດເຫນືອ",
-                                      style: textTitleGrey,
+                                      "ພະແນກ",
+                                      style: textSimple,
                                     ),
-                                    Spacer(),
-                                    Icon(
-                                      Icons.edit,
-                                      color: Colors.blueGrey,
+                                    Text(
+                                      "ພະນັກງານຂົນສົ່ງສາຂາ 2",
+                                      style: textTitle,
                                     )
                                   ],
                                 ),
-                              ),
-                            )),
-                        SizedBox(
-                            height: 100,
-                            child: Card(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Row(
+                                Spacer(),
+                                Icon(
+                                  Icons.edit,
+                                  color: Colors.blueGrey,
+                                )
+                              ],
+                            ),
+                            
+                          ),
+                        )),
+                    SizedBox(
+                        height: 100,
+                        child: Card(
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "ເມືອງ : ສີໂຄດ",
-                                      style: textTitleGrey,
+                                      "ເບີໂທ ",
+                                      style: textSimple,
                                     ),
-                                    Spacer(),
-                                    Icon(
-                                      Icons.edit,
-                                      color: Colors.blueGrey,
+                                    Text(
+                                      "77995490",
+                                      style: textTitle,
                                     )
                                   ],
                                 ),
-                              ),
-                            )),
-                        SizedBox(
-                            height: 100,
-                            child: Card(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Row(
+                                Spacer(),
+                                Icon(
+                                  Icons.edit,
+                                  color: Colors.blueGrey,
+                                )
+                              ],
+                            ),
+                          ),
+                        )),
+                    SizedBox(
+                        height: 100,
+                        child: Card(
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "ແຂວງ : ນະຄອນຫລວງ",
-                                      style: textTitleGrey,
+                                      "ບ້ານ ",
+                                      style: textSimple,
                                     ),
-                                    Spacer(),
-                                    Icon(
-                                      Icons.edit,
-                                      color: Colors.blueGrey,
+                                    Text(
+                                      "ໂພນສະຫວາດເຫນືອ",
+                                      style: textTitle,
                                     )
                                   ],
                                 ),
-                              ),
-                            )),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
+                                Spacer(),
+                                Icon(
+                                  Icons.edit,
+                                  color: Colors.blueGrey,
+                                )
+                              ],
+                            ),
+                          ),
+                        )),
+                    SizedBox(
+                        height: 100,
+                        child: Card(
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "ເມືອງ ",
+                                      style: textSimple,
+                                    ),
+                                    Text(
+                                      "ສີໂຄດ",
+                                      style: textTitle,
+                                    ),
+                                  ],
+                                ),
+                                Spacer(),
+                                Icon(
+                                  Icons.edit,
+                                  color: Colors.blueGrey,
+                                )
+                              ],
+                            ),
+                          ),
+                        )),
+                    SizedBox(
+                        height: 100,
+                        child: Card(
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "ແຂວງ",
+                                      style: textSimple,
+                                    ),
+                                    Text(
+                                      "ນະຄອນຫລວງ",
+                                      style: textTitle,
+                                    )
+                                  ],
+                                ),
+                                Spacer(),
+                                Icon(
+                                  Icons.edit,
+                                  color: Colors.blueGrey,
+                                )
+                              ],
+                            ),
+                          ),
+                        )),
+                  ],
+                ),
+              )
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

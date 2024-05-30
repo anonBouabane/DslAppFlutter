@@ -1,4 +1,4 @@
-import 'package:dslsale/data/data.dart';
+import 'package:dslsale/data/data_dump.dart';
 import 'package:dslsale/util/textstyle.dart';
 import 'package:dslsale/view/Screen/dashboard/detailproduct/product_detail.dart';
 import 'package:flutter/material.dart';

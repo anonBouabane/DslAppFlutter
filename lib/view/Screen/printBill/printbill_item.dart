@@ -1,16 +1,16 @@
-import 'package:dslsale/data/data.dart';
+import 'package:dslsale/data/data_dump.dart';
 import 'package:dslsale/util/textstyle.dart';
 import 'package:dslsale/view/Screen/dashboard/widget/search_screen.dart';
 import 'package:flutter/material.dart';
 
-class PrintbilScreen extends StatefulWidget {
-  const PrintbilScreen({super.key});
+class PrintbillScreen extends StatefulWidget {
+  const PrintbillScreen({super.key});
 
   @override
-  State<PrintbilScreen> createState() => _PrintbilScreenState();
+  State<PrintbillScreen> createState() => _PrintbillScreenState();
 }
 
-class _PrintbilScreenState extends State<PrintbilScreen> {
+class _PrintbillScreenState extends State<PrintbillScreen> {
   final mapData = Data();
   @override
   Widget build(BuildContext context) {
@@ -48,14 +48,14 @@ class _PrintbilScreenState extends State<PrintbilScreen> {
                       itemCount: 10,
                       itemBuilder: (context, index) {
                         return SizedBox(
-                          height: 210,
+                          height: 220,
                           child: Card(
                               child: ListTile(
                             title: Column(
                               children: [
                                 Center(
                                   child: Text(
-                                    "ID ບິນ : ${mapData.history[index]['id'].toString()}",
+                                    "ເລກບິນ:${mapData.history[index]['id'].toString()}",
                                     style: textTitle,
                                   ),
                                 ),

@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 //==============styletextsimple==============
 
 const textSimple =
-    TextStyle(fontSize: 16, color: Colors.black, fontWeight: FontWeight.w300);
+    TextStyle(fontSize: 17, color: Colors.black, fontWeight: FontWeight.w300);
     const textSimplegrey =
-    TextStyle(fontSize: 16, color: Colors.grey, fontWeight: FontWeight.bold);
+    TextStyle(fontSize: 17, color: Colors.grey, fontWeight: FontWeight.bold);
 const textSimpleBold = TextStyle(fontSize: 18, fontWeight: FontWeight.bold);
 const textsimpleWhite =
     TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white);

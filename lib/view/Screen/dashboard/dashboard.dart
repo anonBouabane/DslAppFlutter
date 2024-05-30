@@ -1,7 +1,7 @@
 import 'package:dslsale/view/Screen/dashboard/widget/carousel_screen.dart';
-import 'package:dslsale/view/Screen/dashboard/widget/Product_screen.dart';
+import 'package:dslsale/view/Screen/dashboard/widget/product_screen.dart';
 import 'package:dslsale/view/Screen/dashboard/widget/search_screen.dart';
-import 'package:dslsale/view/Screen/history/printbil_item.dart';
+import 'package:dslsale/view/Screen/printBill/printbill_item.dart';
 import 'package:dslsale/view/widget/drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +28,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => const PrintbilScreen()),
+                    MaterialPageRoute(builder: (_) => const PrintbillScreen()),
                   );
                 },
                 icon: const Icon(
