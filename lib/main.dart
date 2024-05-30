@@ -1,5 +1,4 @@
 import 'package:dslsale/view/Screen/auth/register_screen.dart';
-import 'package:dslsale/view/Screen/dashboard/detailproduct/detail_product.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +14,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: "phetsarath_ot.ttf"),
       debugShowCheckedModeBanner: false,
       home: const RegisterScreen(),
-      routes: {'/detail': (context) => const DetailProductScreen()},
     );
   }
 }

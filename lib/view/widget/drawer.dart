@@ -1,4 +1,8 @@
 import 'package:dslsale/util/textstyle.dart';
+import 'package:dslsale/view/Screen/auth/register_screen.dart';
+import 'package:dslsale/view/Screen/history/printbil_item.dart';
+import 'package:dslsale/view/Screen/profile/profile.dart';
+import 'package:dslsale/view/Screen/register_customer.dart';
 import 'package:dslsale/view/widget/listtile_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +16,9 @@ class DrawerScreen extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           const DrawerHeader(
+            curve: Curves.fastOutSlowIn,
             decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(bottomRight: Radius.circular(15)),
               color: Colors.blue,
             ),
             child: Column(
@@ -24,26 +30,55 @@ class DrawerScreen extends StatelessWidget {
             ),
           ),
           ListTileDrawer(
-              textTile: "ເບິ່ງໂປຮຟາຍ",
-              style: textSimple,
-              icon: Icons.person_outline_outlined),
+              textTile: "ເບິ່ງໂປຣໄຟລ໌",
+              style: textSimplegrey,
+              icon: Icons.person_outline_outlined,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ProfileScreen(),
+                  ),
+                );
+              }),
+          
           ListTileDrawer(
-              textTile: "ປີ້ນປິນ", style: textSimple, icon: Icons.print),
+            textTile: "ລົງທະບຽນລູກຄ້າ",
+            style: textSimplegrey,
+            icon: Icons.group_add_outlined,
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const RegisterCustoScreen()));
+            },
+          ),
           ListTileDrawer(
-              textTile: "ລົງທະບຽນລູກຄ້າ",
-              style: textSimple,
-              icon: Icons.group_add_outlined),
+            textTile: "ປິ້ນບິນ",
+            style: textSimplegrey,
+            icon: Icons.print,
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const PrintbilScreen()));
+            },
+          ),
           ListTileDrawer(
-              textTile: "ປະຫວັດການສັ່ງຊື້ສິນຄ້າ",
-              style: textSimple,
-              icon: Icons.history),
+            textTile: "ກະຕ່າສິນຄ້າ",
+            style: textSimplegrey,
+            icon: Icons.shopping_cart_outlined,
+            onTap: () {},
+          ),
           const Divider(),
           ListTileDrawer(
-              textTile: "ອອກຈາກລະບົບ",
-              style: textSimple,
-              icon: Icons.exit_to_app)
+            textTile: "ອອກຈາກລະບົບ",
+            style: textSimplegrey,
+            icon: Icons.exit_to_app,
+            onTap: () {Navigator.push(context,MaterialPageRoute(builder: (_)=>const RegisterScreen()));},
+          )
         ],
-      ),
+      )
     );
   }
 }

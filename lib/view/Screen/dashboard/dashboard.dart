@@ -1,6 +1,7 @@
 import 'package:dslsale/view/Screen/dashboard/widget/carousel_screen.dart';
-import 'package:dslsale/view/Screen/dashboard/widget/gidview_screen.dart';
+import 'package:dslsale/view/Screen/dashboard/widget/Product_screen.dart';
 import 'package:dslsale/view/Screen/dashboard/widget/search_screen.dart';
+import 'package:dslsale/view/Screen/history/printbil_item.dart';
 import 'package:dslsale/view/widget/drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,21 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
           drawer: const DrawerScreen(),
           backgroundColor: Colors.white,
           appBar: AppBar(
+            actions: [
+              IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const PrintbilScreen()),
+                  );
+                },
+                icon: const Icon(
+                  Icons.shopping_cart_outlined,
+                  color: Colors.white,
+                ),
+              )
+            ],
+            iconTheme: const IconThemeData(color: Colors.white),
             centerTitle: true,
             title: const Text(
               "DSL",
@@ -31,30 +47,27 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                   color: Colors.white),
             ),
             backgroundColor: Colors.blueAccent,
-            actions: const [
-              Icon(
-                Icons.exit_to_app_outlined,
-                size: 30,
-              ),
-            ],
           ),
-          body: const SingleChildScrollView(
-            child: Stack(
-              children: [
-                Column(
-                  children: [
-                    SearchScreen(),
-                    CarouselDashboard(),
-                  ],
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 300),
-                  child: Column(
-                    children: [GidviewScreen()],
+          body: Stack(
+            children: [
+              ListView(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 70),
+                    child: Column(
+                      children: [
+                        CarouselScreen(),
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 50),
+                          child: ProductScreen(),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            ),
+                ],
+              ),
+             const SearchScreen(),
+            ],
           ),
         ));
   }

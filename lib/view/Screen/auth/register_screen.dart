@@ -18,7 +18,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           height: double.infinity,
           width: double.infinity,
           child: Image.asset(
-            Images.registerBG,
+            Images.background,
             fit: BoxFit.fill,
           ),
         ),

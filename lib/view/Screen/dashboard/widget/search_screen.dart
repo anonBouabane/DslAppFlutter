@@ -16,22 +16,20 @@ class _SearchScreenState extends State<SearchScreen> {
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: SizedBox(
-              height: 50,
-              width: MediaQuery.of(context).size.width,
-              child: TextFormField(
-                decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(horizontal: 30),
-                    hintText: "search...",
-                    suffixIcon: Icon(
-                      Icons.search,
-                      color: Colors.blue,
-                    ),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(15)))),
-              )),
-        ),
+        child: Container(decoration:const BoxDecoration(color: Colors.white),
+            height: 50,
+            width: MediaQuery.of(context).size.width,
+            child: TextFormField(
+              decoration: const InputDecoration(
+                  contentPadding: EdgeInsets.symmetric(horizontal: 30),
+                  hintText: "search...",
+                  suffixIcon: Icon(
+                    Icons.search,
+                    color: Colors.blue,
+                  ),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(15)))),
+            )),
       ),
     );
   }

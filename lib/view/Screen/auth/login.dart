@@ -20,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
           height: double.infinity,
           width: double.infinity,
           child: Image.asset(
-            Images.registerBG,
+            Images.background,
             fit: BoxFit.fill,
           ),
         ),
