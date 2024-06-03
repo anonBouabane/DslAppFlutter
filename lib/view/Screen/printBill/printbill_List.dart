@@ -84,7 +84,7 @@ class _PrintbillScreenState extends State<PrintbillScreen> {
                                     Row(
                                       children: [
                                         Text(
-                                          'ຊື່ລູກຄ້າ : ${mapData.history[index]['custoName']}',
+                                          'ຊື່ຮ້ານ : ${mapData.history[index]['custoName']}',
                                           style: textSimplegrey,
                                         ),
                                         const Spacer(),

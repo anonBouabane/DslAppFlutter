@@ -22,7 +22,7 @@ class ListTileDrawer extends StatelessWidget {
       leading: Icon(
         icon,
         color: Colors.blue,
-        size: 35,
+        size: 30,
       ),
       title: Text(
         textTile,

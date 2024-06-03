@@ -1,8 +1,9 @@
 import 'package:dslsale/util/textstyle.dart';
 import 'package:dslsale/view/Screen/auth/register_screen.dart';
-import 'package:dslsale/view/Screen/printBill/printbill_item.dart';
+import 'package:dslsale/view/Screen/dashboard/detailproduct/product_cart.dart';
+import 'package:dslsale/view/Screen/printBill/printbill_List.dart';
 import 'package:dslsale/view/Screen/profile/profile.dart';
-import 'package:dslsale/view/Screen/register_customer.dart';
+import 'package:dslsale/view/Screen/dashboard/registerCustomer/register_customer.dart';
 import 'package:dslsale/view/widget/listtile_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -67,15 +68,27 @@ class DrawerScreen extends StatelessWidget {
           textTile: "ກະຕ່າສິນຄ້າ",
           style: textSimplegrey,
           icon: Icons.shopping_cart_outlined,
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) =>const CartScreen()));
+          },
         ),
         const Divider(),
+        ListTileDrawer(
+          textTile: "ປ່ຽນພາສາ",
+          style: textSimplegrey,
+          icon: Icons.language,
+          onTap: () {},
+        ),
         ListTileDrawer(
           textTile: "ອອກຈາກລະບົບ",
           style: textSimplegrey,
           icon: Icons.exit_to_app,
-          onTap: () {Navigator.push(context,MaterialPageRoute(builder: (_)=>const RegisterScreen()));},
-        )
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const RegisterScreen()));
+          },
+        ),
       ],
     ));
   }

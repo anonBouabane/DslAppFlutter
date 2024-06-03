@@ -1,7 +1,7 @@
+import 'package:dslsale/view/Screen/dashboard/detailproduct/product_cart.dart';
 import 'package:dslsale/view/Screen/dashboard/widget/carousel_screen.dart';
 import 'package:dslsale/view/Screen/dashboard/widget/product_screen.dart';
-import 'package:dslsale/view/Screen/dashboard/widget/search_screen.dart';
-import 'package:dslsale/view/Screen/printBill/printbill_item.dart';
+import 'package:dslsale/view/Screen/dashboard/widget/search_screen.dart'; 
 import 'package:dslsale/view/widget/drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +28,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => const PrintbillScreen()),
+                    MaterialPageRoute(builder: (_) => const CartScreen()),
                   );
                 },
                 icon: const Icon(
@@ -40,7 +40,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
             iconTheme: const IconThemeData(color: Colors.white),
             centerTitle: true,
             title: const Text(
-              "DSL",
+              "ຫນ້າຫລັກ",
               style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                   ),
                 ],
               ),
-             const SearchScreen(),
+              const SearchScreen(),
             ],
           ),
         ));

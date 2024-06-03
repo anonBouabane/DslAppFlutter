@@ -58,21 +58,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   decoration: const InputDecoration(
                       contentPadding: EdgeInsets.symmetric(horizontal: 20),
                       border: InputBorder.none,
-                      hintText: "Enter your phonenumber"),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
-              child: Container(
-                decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(15))),
-                height: 50,
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 20),
-                      border: InputBorder.none,
                       hintText: "Enter your password"),
                 ),
               ),

@@ -51,11 +51,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   children: [
                                     Text(
                                       "Name ",
-                                      style: textSimple,
+                                      style: textSimplegrey,
                                     ),
                                     Text(
                                       "anon bouaban",
-                                      style: textTitle,
+                                      style: textTitleGrey,
                                     )
                                   ],
                                 ),
@@ -82,11 +82,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   children: [
                                     Text(
                                       "ເພດ  ",
-                                      style: textSimple,
+                                      style: textSimplegrey,
                                     ),
                                     Text(
                                       "ຊາຍ",
-                                      style: textTitle,
+                                      style: textTitleGrey,
                                     )
                                   ],
                                 ),
@@ -114,11 +114,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   children: [
                                     Text(
                                       "ອາຍຸ  ",
-                                      style: textSimple,
+                                      style: textSimplegrey,
                                     ),
                                     Text(
                                       "21 ປີ",
-                                      style: textTitle,
+                                      style: textTitleGrey,
                                     )
                                   ],
                                 ),
@@ -146,11 +146,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   children: [
                                     Text(
                                       "ພະແນກ",
-                                      style: textSimple,
+                                      style: textSimplegrey,
                                     ),
                                     Text(
                                       "ພະນັກງານຂົນສົ່ງສາຂາ 2",
-                                      style: textTitle,
+                                      style: textTitleGrey,
                                     )
                                   ],
                                 ),
@@ -178,11 +178,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   children: [
                                     Text(
                                       "ເບີໂທ ",
-                                      style: textSimple,
+                                      style: textSimplegrey,
                                     ),
                                     Text(
                                       "77995490",
-                                      style: textTitle,
+                                      style: textTitleGrey,
                                     )
                                   ],
                                 ),
@@ -209,11 +209,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   children: [
                                     Text(
                                       "ບ້ານ ",
-                                      style: textSimple,
+                                      style: textSimplegrey,
                                     ),
                                     Text(
                                       "ໂພນສະຫວາດເຫນືອ",
-                                      style: textTitle,
+                                      style: textTitleGrey,
                                     )
                                   ],
                                 ),
@@ -240,11 +240,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   children: [
                                     Text(
                                       "ເມືອງ ",
-                                      style: textSimple,
+                                      style: textSimplegrey,
                                     ),
                                     Text(
                                       "ສີໂຄດ",
-                                      style: textTitle,
+                                      style: textTitleGrey,
                                     ),
                                   ],
                                 ),
@@ -271,11 +271,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   children: [
                                     Text(
                                       "ແຂວງ",
-                                      style: textSimple,
+                                      style: textSimplegrey,
                                     ),
                                     Text(
                                       "ນະຄອນຫລວງ",
-                                      style: textTitle,
+                                      style: textTitleGrey,
                                     )
                                   ],
                                 ),
