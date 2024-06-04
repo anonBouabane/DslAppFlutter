@@ -14,6 +14,8 @@ class _ProductScreenState extends State<ProductScreen> {
   final _gridMap = Data();
   @override
   Widget build(BuildContext context) {
+    //================gitview item product==============//
+
     return GridView.builder(
       physics: const NeverScrollableScrollPhysics(),
       // primary: false,
@@ -25,6 +27,8 @@ class _ProductScreenState extends State<ProductScreen> {
           crossAxisSpacing: 1,
           childAspectRatio: 0.9),
       itemBuilder: (context, index) {
+//================tap to detail product==============//
+
         return GestureDetector(
           onTap: () {
             Navigator.push(
@@ -34,6 +38,9 @@ class _ProductScreenState extends State<ProductScreen> {
               ),
             );
           },
+
+          //================ card ==============//
+
           child: Card(
             child: Padding(
               padding: const EdgeInsets.all(8.0),

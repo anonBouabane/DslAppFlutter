@@ -1,7 +1,7 @@
 import 'package:dslsale/view/Screen/dashboard/detailproduct/product_cart.dart';
-import 'package:dslsale/view/Screen/dashboard/widget/carousel_screen.dart';
 import 'package:dslsale/view/Screen/dashboard/widget/product_screen.dart';
-import 'package:dslsale/view/Screen/dashboard/widget/search_screen.dart'; 
+import 'package:dslsale/view/Screen/dashboard/widget/product_type.dart';
+import 'package:dslsale/view/Screen/dashboard/widget/search_screen.dart';
 import 'package:dslsale/view/widget/drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -20,8 +20,13 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
           FocusScope.of(context).unfocus();
         },
         child: Scaffold(
+          
+          //=========drawer===========//
+
           drawer: const DrawerScreen(),
           backgroundColor: Colors.white,
+
+          //==========appbar =========//
           appBar: AppBar(
             actions: [
               IconButton(
@@ -34,6 +39,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                 icon: const Icon(
                   Icons.shopping_cart_outlined,
                   color: Colors.white,
+                  size: 30,
                 ),
               )
             ],
@@ -48,25 +54,37 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
             ),
             backgroundColor: Colors.blueAccent,
           ),
+
+          //==========content=========//
+
           body: Stack(
             children: [
               ListView(
                 children: const [
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 70),
+                    padding: EdgeInsets.symmetric(vertical: 140),
                     child: Column(
                       children: [
-                        CarouselScreen(),
-                        Padding(
-                          padding: EdgeInsets.symmetric(vertical: 50),
-                          child: ProductScreen(),
-                        ),
+                        //================product screen==============//
+
+                        ProductScreen(),
                       ],
                     ),
                   ),
                 ],
               ),
-              const SearchScreen(),
+
+//================widget search==============//
+              Container(
+                height: 130,
+                decoration:const BoxDecoration(color: Colors.white),
+                child: const Column(
+                  children: [
+                    SearchScreen(),
+                    ProductTypeScreen(),
+                  ],
+                ),
+              )
             ],
           ),
         ));

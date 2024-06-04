@@ -1,5 +1,4 @@
 import 'package:dslsale/util/images.dart';
-import 'package:dslsale/view/Screen/auth/register_screen.dart';
 import 'package:dslsale/view/Screen/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
             fit: BoxFit.fill,
           ),
         ),
-        Column(
+        Column(crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
@@ -89,36 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            const Divider(
-              endIndent: 60,
-              indent: 60,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 80),
-              child: InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: ((context) => const RegisterScreen())));
-                },
-                child: Container(
-                  height: 50,
-                  decoration: BoxDecoration(
-                      color: Colors.amber,
-                      borderRadius: BorderRadius.circular(15)),
-                  child: const Center(
-                    child: Text(
-                      "ລົງທະບຽນ",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-              ),
-            )
+            
           ],
         )
       ],

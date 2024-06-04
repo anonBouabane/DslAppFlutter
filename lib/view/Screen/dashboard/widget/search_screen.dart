@@ -15,7 +15,7 @@ class _SearchScreenState extends State<SearchScreen> {
         FocusScope.of(context).unfocus();
       },
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(5.0),
         child: Container(decoration:const BoxDecoration(color: Colors.white),
             height: 50,
             width: MediaQuery.of(context).size.width,

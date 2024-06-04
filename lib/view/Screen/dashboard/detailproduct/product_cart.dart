@@ -14,9 +14,10 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     final gridmap = Data();
-    final total = price * counter;
-    // final datagridmap = Data();
     return Scaffold(
+
+      //================appbar==============//
+      
       appBar: AppBar(
         leading: IconButton(
             onPressed: () {
@@ -33,6 +34,9 @@ class _CartScreenState extends State<CartScreen> {
         ),
         centerTitle: true,
       ),
+
+      //================content==============//
+
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -53,45 +57,6 @@ class _CartScreenState extends State<CartScreen> {
                                 scale: 2,
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Row(
-                                    children: [
-                                      const Text(
-                                        "ຈຳນວນ : ",
-                                        style: textSimplegrey,
-                                      ),
-                                      IconButton(
-                                        onPressed: () {
-                                          remove();
-                                        },
-                                        icon: const Icon(
-                                          Icons.remove,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                      Text(counter.toString()),
-                                      IconButton(
-                                          onPressed: () {
-                                            add();
-                                          },
-                                          icon: const Icon(
-                                            Icons.add,
-                                            color: Colors.black,
-                                          ))
-                                    ],
-                                  ),
-                                  Text(
-                                    'ລາຄາ : ${gridmap.gridMap[index]['price']}',
-                                    style: textSimplegrey,
-                                  )
-                                ],
-                              ),
-                            )
                           ],
                         ),
                       ),
@@ -101,38 +66,28 @@ class _CartScreenState extends State<CartScreen> {
           ],
         ),
       ),
+
+      //===========>>bottomappbar================
+
       bottomNavigationBar: BottomAppBar(
-        color:const Color.fromARGB(255, 68, 147, 212),
+        color: const Color.fromARGB(255, 68, 147, 212),
         // color: Colors.blue,
         child: Container(
             decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(15))),
             child: TextButton(
-                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> const PaymentDetailScreen()));},
-                child: Text(
-                  "ລວມ : ${total}",
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const PaymentDetailScreen()));
+                },
+                child: const Text(
+                  "ຊຳລະ",
                   style: textTitleGrey,
                 ))),
       ),
     );
-  }
-
-  int counter = 1;
-  int price = 120000;
-
-  add() {
-    setState(() {
-      counter += 1;
-    });
-  }
-
-  remove() {
-    if (counter == 1) {
-      return;
-    }
-    setState(() {
-      counter -= 1;
-    });
   }
 }

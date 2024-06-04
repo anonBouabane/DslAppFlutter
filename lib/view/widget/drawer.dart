@@ -1,5 +1,5 @@
 import 'package:dslsale/util/textstyle.dart';
-import 'package:dslsale/view/Screen/auth/register_screen.dart';
+import 'package:dslsale/view/Screen/auth/login.dart';
 import 'package:dslsale/view/Screen/dashboard/detailproduct/product_cart.dart';
 import 'package:dslsale/view/Screen/printBill/printbill_List.dart';
 import 'package:dslsale/view/Screen/profile/profile.dart';
@@ -60,7 +60,7 @@ class DrawerScreen extends StatelessWidget {
           onTap: () {
             Navigator.push(
                 context,
-                MaterialPageRoute(
+                MaterialPageRoute(  
                     builder: (context) => const PrintbillScreen()));
           },
         ),
@@ -69,24 +69,18 @@ class DrawerScreen extends StatelessWidget {
           style: textSimplegrey,
           icon: Icons.shopping_cart_outlined,
           onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) =>const CartScreen()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const CartScreen()));
           },
         ),
         const Divider(),
-        ListTileDrawer(
-          textTile: "ປ່ຽນພາສາ",
-          style: textSimplegrey,
-          icon: Icons.language,
-          onTap: () {},
-        ),
         ListTileDrawer(
           textTile: "ອອກຈາກລະບົບ",
           style: textSimplegrey,
           icon: Icons.exit_to_app,
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (_) => const RegisterScreen()));
+                MaterialPageRoute(builder: (_) => const LoginScreen()));
           },
         ),
       ],

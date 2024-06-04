@@ -1,4 +1,4 @@
-import 'package:dslsale/view/Screen/auth/register_screen.dart';
+import 'package:dslsale/view/Screen/auth/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: "phetsarath_ot.ttf"),
       debugShowCheckedModeBanner: false,
-      home: const RegisterScreen(),
+      home: const LoginScreen(),
     );
   }
 }

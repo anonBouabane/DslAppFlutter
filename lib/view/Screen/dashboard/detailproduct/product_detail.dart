@@ -15,6 +15,8 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+//================appbar==============//
+
       appBar: AppBar(
         actions: [
           IconButton(
@@ -46,6 +48,9 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
         ),
         centerTitle: true,
       ),
+
+//================content==============//
+
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -69,11 +74,10 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
             ),
             Row(
               children: [
-                Text(
-                  "ຈຳນວນ : ${counter.toString()}",
+                const Text(
+                  "ຈຳນວນ : ",
                   style: textSimpleBold,
                 ),
-                const Spacer(),
                 IconButton(
                   onPressed: () {
                     remove();
@@ -82,6 +86,10 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                     Icons.remove,
                     color: Colors.black,
                   ),
+                ),
+                Text(
+                  counter.toString(),
+                  style: textSimpleBold,
                 ),
                 IconButton(
                     onPressed: () {
@@ -96,8 +104,11 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
           ],
         ),
       ),
+
+      //=========appbar===========//
+
       bottomNavigationBar: BottomAppBar(
-        color: Colors.white,
+        color: const Color.fromARGB(255, 68, 147, 212),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -105,7 +116,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                 height: 50,
                 width: MediaQuery.of(context).size.width / 1.5,
                 decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 68, 147, 212),
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(15)),
                 child: TextButton(
                     onPressed: () {
@@ -117,7 +128,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                     },
                     child: const Text(
                       'ຊຳລະ',
-                      style: textTitlewhite,
+                      style: textTitleGrey,
                     ))),
             Container(
               height: 50,
