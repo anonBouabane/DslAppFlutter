@@ -1,20 +1,22 @@
 import 'package:dslsale/data/data_dump.dart';
 import 'package:dslsale/util/textstyle.dart';
 import 'package:dslsale/view/Screen/dashboard/widget/search_screen.dart';
+import 'package:dslsale/view/Screen/printBill/invoice.dart';
 import 'package:flutter/material.dart';
 
-class PrintbillScreen extends StatefulWidget {
-  const PrintbillScreen({super.key});
+class HistoryInvoice extends StatefulWidget {
+  const HistoryInvoice({super.key});
 
   @override
-  State<PrintbillScreen> createState() => _PrintbillScreenState();
+  State<HistoryInvoice> createState() => _HistoryInvoiceState();
 }
 
-class _PrintbillScreenState extends State<PrintbillScreen> {
+class _HistoryInvoiceState extends State<HistoryInvoice> {
   final mapData = Data();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //=============== appbar ================//
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -30,18 +32,32 @@ class _PrintbillScreenState extends State<PrintbillScreen> {
           style: textTitlewhite,
         ),
       ),
+      //=============== content ================//
+
       body: GestureDetector(
         onTap: () {
           FocusScope.of(context).unfocus();
         },
         child: Stack(
           children: [
+            //=============== search screen ================//
+
             const SearchScreen(),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 20),
               child: SingleChildScrollView(
+                //=============== tap to new page  ================//
+
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => InvoiceScreen()));
+                  },
+
+                  //=============== list view ================//
+
                   child: ListView.builder(
                       primary: false,
                       shrinkWrap: true,
@@ -49,6 +65,9 @@ class _PrintbillScreenState extends State<PrintbillScreen> {
                       itemBuilder: (context, index) {
                         return SizedBox(
                           height: 220,
+
+                          //=============== card && Listile ================//
+
                           child: Card(
                               child: ListTile(
                             title: Column(
@@ -60,6 +79,8 @@ class _PrintbillScreenState extends State<PrintbillScreen> {
                                   ),
                                 ),
                                 Row(
+                                  //=============== status icon ================//
+
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
@@ -79,6 +100,8 @@ class _PrintbillScreenState extends State<PrintbillScreen> {
                                   ],
                                 ),
                                 Column(
+                                  //=============== detail ================//
+
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Row(

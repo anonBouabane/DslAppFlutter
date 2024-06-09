@@ -2,6 +2,7 @@ import 'package:dslsale/data/data_dump.dart';
 import 'package:dslsale/util/textstyle.dart';
 import 'package:dslsale/view/Screen/dashboard/detailproduct/product_detail.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});
@@ -11,74 +12,54 @@ class ProductScreen extends StatefulWidget {
 }
 
 class _ProductScreenState extends State<ProductScreen> {
-  final _gridMap = Data();
+  final gridMap = Data();
   @override
   Widget build(BuildContext context) {
-    //================gitview item product==============//
-
-    return GridView.builder(
-      physics: const NeverScrollableScrollPhysics(),
-      // primary: false,
-      itemCount: _gridMap.gridMap.length,
-      shrinkWrap: true,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          mainAxisSpacing: 1,
-          crossAxisSpacing: 1,
-          childAspectRatio: 0.9),
-      itemBuilder: (context, index) {
-//================tap to detail product==============//
-
-        return GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const DetailProductScreen(),
-              ),
-            );
-          },
-
-          //================ card ==============//
-
-          child: Card(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height / 6,
-                    width: MediaQuery.of(context).size.width / 2,
-                    child: Image.asset(
-                      _gridMap.gridMap[index]['image'],
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 5),
-                    child: Row(
-                      children: [
-                        Text(
-                          _gridMap.gridMap[index]['title'],
-                          style: textSimplegrey,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        "${_gridMap.gridMap[index]['price']} LAK",
-                        style: textSimplegrey,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-        );
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const DetailProductScreen()));
       },
+      child: ListView.builder(
+          shrinkWrap: true,
+          primary: false,
+          itemCount: 10,
+          itemBuilder: (_, index) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              child: SizedBox(
+                  height: 80,
+                  child: Card(
+                      child: ListTile(
+                    leading: Container(height: 40,width: 40,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(10))),
+                      child: IconButton(
+                          onPressed: () {
+                            final snackBar = SnackBar(
+                              content: const Text("ເພີ່ມເຂົ້າກະຕ່າສຳເລັດ"),
+                              action: SnackBarAction(
+                                  label: "Undo", onPressed: () {}),
+                            );
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackBar);
+                          },
+                          icon: Icon(Icons.add_shopping_cart_outlined)),
+                    ),
+                    title: Text(
+                      '${gridMap.gridMap[index]['title']}',
+                      style: textSimplegrey,
+                    ),
+                    subtitle: Text(
+                      '${gridMap.gridMap[index]['price'] } LAK',
+                      style: textSimplegrey,
+                    ),
+                  ))),
+            );
+          }),
     );
   }
 }

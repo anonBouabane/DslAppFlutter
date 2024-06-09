@@ -14,10 +14,10 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     final gridmap = Data();
-    return Scaffold(
 
-      //================appbar==============//
-      
+    return Scaffold(
+      //================ appbar ==============//
+
       appBar: AppBar(
         leading: IconButton(
             onPressed: () {
@@ -35,47 +35,86 @@ class _CartScreenState extends State<CartScreen> {
         centerTitle: true,
       ),
 
-      //================content==============//
+      //================ content ==============//
 
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            ListView.builder(
-                shrinkWrap: true,
-                itemCount: 2,
-                primary: false,
-                itemBuilder: (context, index) {
-                  return SizedBox(
-                    height: 200,
-                    child: Card(
-                      child: ListTile(
-                        title: Row(
-                          children: [
-                            Center(
-                              child: Image.asset(
-                                gridmap.gridMap[index]['image'],
-                                scale: 2,
-                              ),
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            children: [
+              ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: 2,
+                  primary: false,
+                  itemBuilder: (context, index) {
+                    return SizedBox(
+                      height: 90,
+                      child: Card(
+                        child: Center(
+                          child: ListTile(
+                            title: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    const Text(
+                                      'ສິນຄ້າ : ',
+                                      style: textSimplegrey,
+                                    ),
+                                    const Spacer(),
+                                    Text(
+                                      gridmap.gridMap[index]['title'],
+                                      style: textSimplegrey,
+                                    )
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text(
+                                      'ຈຳນວນ : ',
+                                      style: textSimplegrey,
+                                    ),
+                                    Spacer(),
+                                    Text(
+                                      '12',
+                                      style: textSimplegrey,
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    const Text(
+                                      'ລາຄາ : ',
+                                      style: textSimplegrey,
+                                    ),
+                                    const Spacer(),
+                                    Text(
+                                      gridmap.gridMap[index]['price'],
+                                      style: textSimplegrey,
+                                    )
+                                  ],
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
                       ),
-                    ),
-                  );
-                })
-          ],
+                    );
+                  })
+            ],
+          ),
         ),
       ),
 
-      //===========>>bottomappbar================
+      //===========>> footer ================
 
       bottomNavigationBar: BottomAppBar(
         color: const Color.fromARGB(255, 68, 147, 212),
-        // color: Colors.blue,
         child: Container(
             decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(15))),
+
+            //======================payment========================
             child: TextButton(
                 onPressed: () {
                   Navigator.push(

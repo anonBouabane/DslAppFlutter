@@ -15,19 +15,22 @@ class _SearchScreenState extends State<SearchScreen> {
         FocusScope.of(context).unfocus();
       },
       child: Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: Container(decoration:const BoxDecoration(color: Colors.white),
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+            decoration: const BoxDecoration(color: Colors.white),
             height: 50,
             width: MediaQuery.of(context).size.width,
             child: TextFormField(
-              decoration: const InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(horizontal: 30),
+              decoration: InputDecoration(
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 30),
                   hintText: "search...",
-                  suffixIcon: Icon(
-                    Icons.search,
-                    color: Colors.blue,
-                  ),
-                  border: OutlineInputBorder(
+                  suffixIcon: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.search,
+                        color: Colors.blue,
+                      )),
+                  border: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(15)))),
             )),
       ),

@@ -20,7 +20,6 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
           FocusScope.of(context).unfocus();
         },
         child: Scaffold(
-          
           //=========drawer===========//
 
           drawer: const DrawerScreen(),
@@ -36,10 +35,13 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                     MaterialPageRoute(builder: (_) => const CartScreen()),
                   );
                 },
+
+                //=============== icon appbar ================//
+
                 icon: const Icon(
                   Icons.shopping_cart_outlined,
                   color: Colors.white,
-                  size: 30,
+                  size: 25,
                 ),
               )
             ],
@@ -59,28 +61,22 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
 
           body: Stack(
             children: [
-              ListView(
-                children: const [
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 140),
-                    child: Column(
-                      children: [
-                        //================product screen==============//
-
-                        ProductScreen(),
-                      ],
-                    ),
-                  ),
-                ],
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 120),
+                child: 
+                ProductScreen(),
               ),
 
-//================widget search==============//
+//================w idget search ==============//
               Container(
                 height: 130,
-                decoration:const BoxDecoration(color: Colors.white),
+                decoration: const BoxDecoration(color: Colors.white),
                 child: const Column(
                   children: [
                     SearchScreen(),
+
+//================ product type search ==============//
+
                     ProductTypeScreen(),
                   ],
                 ),

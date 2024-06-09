@@ -2,7 +2,6 @@ import 'package:dslsale/util/textstyle.dart';
 import 'package:dslsale/view/widget/text_formfield.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:time_picker_spinner_pop_up/time_picker_spinner_pop_up.dart';
 
 class RegisterCustoScreen extends StatefulWidget {
   const RegisterCustoScreen({super.key});
@@ -12,6 +11,21 @@ class RegisterCustoScreen extends StatefulWidget {
 }
 
 class _RegisterCustoScreenState extends State<RegisterCustoScreen> {
+  DateTime _selectedDate = DateTime.now();
+
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: _selectedDate,
+      firstDate: DateTime(1900),
+      lastDate: DateTime(2500),
+    );
+    if (picked != null && picked != _selectedDate)
+      setState(() {
+        _selectedDate = picked;
+      });
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -68,39 +82,40 @@ class _RegisterCustoScreenState extends State<RegisterCustoScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width / 1.8,
-                      height: 40,
-                      decoration: BoxDecoration(
-                          border: Border.all(width: 0.5),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: const Center(
-                        child: Text(
-                          'ເລືອກວັນເດືອນປີເກີດ :',
-                          style: textSimplegrey,
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        const SizedBox(
+                          height: 20.0,
                         ),
-                      ),
+                        ElevatedButton(
+                          onPressed: () => _selectDate(context),
+                          child: Text(
+                              'ເລືອກວັນເດືອນປີເກີດ${_selectedDate.toLocal()}'
+                                  .split(' ')[0]),
+                        ),
+                      ],
                     ),
-                    TimePickerSpinnerPopUp(
-                      textStyle: const TextStyle(
-                          color: Colors.grey, fontWeight: FontWeight.bold),
-                      mode: CupertinoDatePickerMode.date,
-                      initTime: DateTime.now(),
-                      minTime:
-                          DateTime.now().subtract(const Duration(days: 10)),
-                      maxTime: DateTime.now().add(const Duration(days: 10)),
-                      barrierColor:
-                          Colors.black12, //Barrier Color when pop up show
-                      minuteInterval: 1,
-                      cancelText: 'Cancel',
-                      confirmText: 'OK',
-                      pressType: PressType.singlePress,
-                      timeFormat: 'yyyy/MM/dd',
+                    // TimePickerSpinnerPopUp(
+                    //   textStyle: const TextStyle(
+                    //       color: Colors.grey, fontWeight: FontWeight.bold),
+                    //   mode: CupertinoDatePickerMode.date,
+                    //   initTime: DateTime.now(),
+                    //   minTime:
+                    //       DateTime.now().subtract(const Duration(days: 10)),
+                    //   maxTime: DateTime.now().add(const Duration(days: 10)),
+                    //   barrierColor:
+                    //       Colors.black12, //Barrier Color when pop up show
+                    //   minuteInterval: 1,
+                    //   cancelText: 'Cancel',
+                    //   confirmText: 'OK',
+                    //   pressType: PressType.singlePress,
+                    //   timeFormat: 'yyyy/MM/dd',
 
-                      onChange: (dateTime) {
-                        // Implement your logic with select dateTime
-                      },
-                    ),
+                    //   onChange: (dateTime) {
+                    //     // Implement your logic with select dateTime
+                    //   },
+                    // ),
                   ],
                 ),
               ),

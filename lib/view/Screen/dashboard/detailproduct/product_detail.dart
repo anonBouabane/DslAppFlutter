@@ -1,4 +1,3 @@
-import 'package:dslsale/util/images.dart';
 import 'package:dslsale/util/textstyle.dart';
 import 'package:dslsale/view/Screen/dashboard/detailproduct/product_cart.dart';
 import 'package:dslsale/view/Screen/dashboard/payment/payment_detail.dart';
@@ -15,7 +14,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-//================appbar==============//
+//================ appbar ==============//
 
       appBar: AppBar(
         actions: [
@@ -29,7 +28,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
               icon: const Icon(
                 Icons.shopping_cart_outlined,
                 color: Colors.white,
-                size: 30,
+                size: 25,
               ))
         ],
         leading: IconButton(
@@ -55,24 +54,15 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Center(
-                child: SizedBox(
-                  width: double.infinity,
-                  height: 250,
-                  child: Image.asset(
-                    Images.warter,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
-            ),
+            //================== content detail   ===============//
+
             const Text(
               'ນ້ຳດື່ມຫົວເສືອ 1500ml ແພັກ 6 ຕຸກ , ນ້ຳດື່ມຫົວເສືອ 250ml ແພັກ 24 ຕຸກ , ນ້ຳດື່ມຫົວເສືອ 600ml ແພັກ 12 ຕຸກນ້ຳດື່ມຫົວເສືອ 1500ml ແພັກ 6 ຕຸກ , ນ້ຳດື່ມຫົວເສືອ 250ml ແພັກ 24 ຕຸກ , ນ້ຳດື່ມຫົວເສືອ 600ml ແພັກ 12 ຕຸກນ້ຳດື່ມຫົວເສືອ 1500ml ແພັກ 6 ຕຸກ , ນ້ຳດື່ມຫົວເສືອ 250ml ແພັກ 24 ຕຸກ , ນ້ຳດື່ມຫົວເສືອ 600ml ແພັກ 12 ຕຸກນ້ຳດື່ມຫົວເສືອ 1500ml ແພັກ 6 ຕຸກ , ນ້ຳດື່ມຫົວເສືອ 250ml ແພັກ 24 ຕຸກ , ນ້ຳດື່ມຫົວເສືອ 600ml ແພັກ 12 ຕຸກ',
               style: textSimplegrey,
             ),
             Row(
+              //================== amount  ===============//
+
               children: [
                 const Text(
                   "ຈຳນວນ : ",
@@ -105,13 +95,15 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
         ),
       ),
 
-      //=========appbar===========//
+      //========= footer ===========//
 
       bottomNavigationBar: BottomAppBar(
         color: const Color.fromARGB(255, 68, 147, 212),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
+            //================== icon payment  ===============//
+
             Container(
                 height: 50,
                 width: MediaQuery.of(context).size.width / 1.5,
@@ -131,8 +123,8 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                       style: textTitleGrey,
                     ))),
             Container(
+              width: MediaQuery.of(context).size.width / 5,
               height: 50,
-              width: 90,
               decoration: BoxDecoration(
                   color: Colors.amber, borderRadius: BorderRadius.circular(15)),
               child: IconButton(
@@ -143,10 +135,13 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                     );
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   },
+
+                  //================== icon cart  ===============//
+
                   icon: const Icon(
                     Icons.add_shopping_cart_outlined,
                     color: Colors.white,
-                    size: 40,
+                    size: 30,
                   )),
             ),
           ],

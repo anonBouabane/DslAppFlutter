@@ -47,7 +47,27 @@ class Data {
       "title": "heiniken",
       "image": "assets/images/heiniken.jpeg",
       "price": "430.000"
-    }
+    }, {
+      "id": 9,
+      "title": "ສະຕິງ",
+      "image": "assets/images/stings.jpeg",
+      "price": "1.500.000"
+    }, {
+      "id": 10,
+      "title": "ສະຕິງ",
+      "image": "assets/images/stings.jpeg",
+      "price": "1.500.000"
+    }, {
+      "id": 11,
+      "title": "ສະຕິງ",
+      "image": "assets/images/stings.jpeg",
+      "price": "1.500.000"
+    }, {
+      "id": 12,
+      "title": "ສະຕິງ",
+      "image": "assets/images/stings.jpeg",
+      "price": "1.500.000"
+    },
   ];
   final List<dynamic> history = [
     {

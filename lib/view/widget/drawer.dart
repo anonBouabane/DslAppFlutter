@@ -1,7 +1,7 @@
 import 'package:dslsale/util/textstyle.dart';
 import 'package:dslsale/view/Screen/auth/login.dart';
 import 'package:dslsale/view/Screen/dashboard/detailproduct/product_cart.dart';
-import 'package:dslsale/view/Screen/printBill/printbill_List.dart';
+import 'package:dslsale/view/Screen/printBill/hsitory_invoice.dart';
 import 'package:dslsale/view/Screen/profile/profile.dart';
 import 'package:dslsale/view/Screen/dashboard/registerCustomer/register_customer.dart';
 import 'package:dslsale/view/widget/listtile_drawer.dart';
@@ -61,7 +61,7 @@ class DrawerScreen extends StatelessWidget {
             Navigator.push(
                 context,
                 MaterialPageRoute(  
-                    builder: (context) => const PrintbillScreen()));
+                    builder: (context) => const HistoryInvoice()));
           },
         ),
         ListTileDrawer(
