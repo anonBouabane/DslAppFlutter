@@ -1,4 +1,4 @@
-import 'package:dslsale/view/Screen/dashboard/detailproduct/product_cart.dart';
+import 'package:dslsale/view/Screen/productcart/product_cart.dart';
 import 'package:dslsale/view/Screen/dashboard/widget/product_screen.dart';
 import 'package:dslsale/view/Screen/dashboard/widget/product_type.dart';
 import 'package:dslsale/view/Screen/dashboard/widget/search_screen.dart';

@@ -12,6 +12,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //================= header ===============
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.blue,
@@ -28,6 +29,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           style: textTitlewhite,
         ),
       ),
+
+      //================ content body ====================
       body: const SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
@@ -39,6 +42,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     SizedBox(
                         height: 80,
+
+                        //============== card ====================
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -68,8 +73,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                           ),
                         )),
-                        SizedBox(
+                    SizedBox(
                         height: 80,
+
+                        //============== card ==================
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -97,11 +104,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 )
                               ],
                             ),
-                            
                           ),
                         )),
                     SizedBox(
                         height: 80,
+
+                        //============== card ==================
+
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -129,11 +138,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 )
                               ],
                             ),
-                            
                           ),
                         )),
-                        SizedBox(
+                    SizedBox(
                         height: 80,
+
+                        //============== card ==================
+
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -161,11 +172,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 )
                               ],
                             ),
-                            
                           ),
                         )),
                     SizedBox(
                         height: 80,
+                        //============== card ==================
+
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -197,6 +209,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         )),
                     SizedBox(
                         height: 80,
+
+                        //============== card ==================
+
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -228,6 +243,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         )),
                     SizedBox(
                         height: 80,
+
+                        //============== card ==================
+
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -259,6 +277,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         )),
                     SizedBox(
                         height: 80,
+
+                        //============== card ==================
+
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),

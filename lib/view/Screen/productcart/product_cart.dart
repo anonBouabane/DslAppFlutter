@@ -1,6 +1,6 @@
 import 'package:dslsale/data/data_dump.dart';
 import 'package:dslsale/util/textstyle.dart';
-import 'package:dslsale/view/Screen/dashboard/payment/payment_detail.dart';
+import 'package:dslsale/view/Screen/payment/payment_detail.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatefulWidget {

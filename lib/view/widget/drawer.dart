@@ -1,9 +1,9 @@
 import 'package:dslsale/util/textstyle.dart';
 import 'package:dslsale/view/Screen/auth/login.dart';
-import 'package:dslsale/view/Screen/dashboard/detailproduct/product_cart.dart';
+import 'package:dslsale/view/Screen/productcart/product_cart.dart';
 import 'package:dslsale/view/Screen/printBill/history_invoice.dart';
 import 'package:dslsale/view/Screen/profile/profile.dart';
-import 'package:dslsale/view/Screen/dashboard/registerCustomer/register_customer.dart';
+import 'package:dslsale/view/Screen/registerCustomer/register_customer.dart';
 import 'package:dslsale/view/widget/listtile_drawer.dart';
 import 'package:flutter/material.dart';
 
