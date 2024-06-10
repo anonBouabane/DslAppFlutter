@@ -61,13 +61,18 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
 
           body: Stack(
             children: [
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 120),
-                child: 
-                ProductScreen(),
+              const SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 120),
+                      child: ProductScreen(),
+                    ),
+                  ],
+                ),
               ),
 
-//================w idget search ==============//
+//================ widget search ==============//
               Container(
                 height: 130,
                 decoration: const BoxDecoration(color: Colors.white),
@@ -75,7 +80,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                   children: [
                     SearchScreen(),
 
-//================ product type search ==============//
+//================ product type ==============//
 
                     ProductTypeScreen(),
                   ],

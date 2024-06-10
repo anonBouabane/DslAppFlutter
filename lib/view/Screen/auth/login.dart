@@ -12,86 +12,94 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Stack(
-      children: [
-        SizedBox(
-          height: double.infinity,
-          width: double.infinity,
-          child: Image.asset(
-            Images.background,
-            fit: BoxFit.fill,
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+      },
+      child: Scaffold(
+          body: Stack(
+        children: [
+          SizedBox(
+            height: double.infinity,
+            width: double.infinity,
+            child: Image.asset(
+              Images.background,
+              fit: BoxFit.fill,
+            ),
           ),
-        ),
-        Column(crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              "Login",
-              style: TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
-              child: Container(
-                height: 50,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15)),
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Enter username",
-                      contentPadding: EdgeInsets.symmetric(horizontal: 30)),
-                ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                "Login",
+                style: TextStyle(
+                    fontSize: 36,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
-              child: Container(
-                height: 50,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15)),
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Enter password",
-                      contentPadding: EdgeInsets.symmetric(horizontal: 30)),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 80),
-              child: InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const DashBoardScreen()));
-                },
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
                 child: Container(
                   height: 50,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.blueAccent),
-                  child: const Center(
-                      child: Text(
-                    "ເຂົ້າສູ່ລະບົບ",
-                    style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  )),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15)),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Enter username",
+                        contentPadding: EdgeInsets.symmetric(horizontal: 30)),
+                  ),
                 ),
               ),
-            ),
-            
-          ],
-        )
-      ],
-    ));
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                child: Container(
+                  height: 50,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15)),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Enter password",
+                        contentPadding: EdgeInsets.symmetric(horizontal: 30)),
+                  ),
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 15, horizontal: 80),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const DashBoardScreen()));
+                  },
+                  child: Container(
+                    height: 50,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.blueAccent),
+                    child: const Center(
+                        child: Text(
+                      "ເຂົ້າສູ່ລະບົບ",
+                      style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    )),
+                  ),
+                ),
+              ),
+            ],
+          )
+        ],
+      )),
+    );
   }
 }

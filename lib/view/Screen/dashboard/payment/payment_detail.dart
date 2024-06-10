@@ -13,6 +13,7 @@ class PaymentDetailScreen extends StatefulWidget {
 class _PaymentDetailScreenState extends State<PaymentDetailScreen> {
   final data = Data();
   int _selectValue = 0;
+  int _selectCurrency = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -101,6 +102,8 @@ class _PaymentDetailScreenState extends State<PaymentDetailScreen> {
                   ),
                 ],
               ),
+
+              //=============== RadiO currency =============
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -110,10 +113,10 @@ class _PaymentDetailScreenState extends State<PaymentDetailScreen> {
                   ),
                   Radio(
                     value: 1,
-                    groupValue: _selectValue,
+                    groupValue: _selectCurrency,
                     onChanged: (int? value) {
                       setState(() {
-                        _selectValue = value!;
+                        _selectCurrency = value!;
                       });
                     },
                   ),
@@ -123,10 +126,10 @@ class _PaymentDetailScreenState extends State<PaymentDetailScreen> {
                   ),
                   Radio(
                     value: 2,
-                    groupValue: _selectValue,
+                    groupValue: _selectCurrency,
                     onChanged: (int? value) {
                       setState(() {
-                        _selectValue = value!;
+                        _selectCurrency = value!;
                       });
                     },
                   ),
@@ -136,10 +139,10 @@ class _PaymentDetailScreenState extends State<PaymentDetailScreen> {
                   ),
                   Radio(
                     value: 3,
-                    groupValue: _selectValue,
+                    groupValue: _selectCurrency,
                     onChanged: (int? value) {
                       setState(() {
-                        _selectValue = value!;
+                        _selectCurrency = value!;
                       });
                     },
                   ),
@@ -220,7 +223,7 @@ class _PaymentDetailScreenState extends State<PaymentDetailScreen> {
 
       bottomNavigationBar: Stack(
         children: [
-          SizedBox(height: 130,
+          SizedBox(height: 120,
             width: double.infinity,
             child: BottomAppBar(
               color: const Color.fromARGB(255, 68, 147, 212),

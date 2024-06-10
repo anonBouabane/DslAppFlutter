@@ -44,15 +44,18 @@ class _CartScreenState extends State<CartScreen> {
             children: [
               ListView.builder(
                   shrinkWrap: true,
-                  itemCount: 2,
+                  itemCount: 10,
                   primary: false,
                   itemBuilder: (context, index) {
                     return SizedBox(
                       height: 90,
+
+                      // ================ card Listile  ==================//
                       child: Card(
                         child: Center(
                           child: ListTile(
-                            title: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                            title: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
                                   children: [
@@ -114,7 +117,7 @@ class _CartScreenState extends State<CartScreen> {
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(15))),
 
-            //======================payment========================
+            //====================== tap to payment========================
             child: TextButton(
                 onPressed: () {
                   Navigator.push(

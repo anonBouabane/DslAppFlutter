@@ -15,6 +15,8 @@ class _ProductScreenState extends State<ProductScreen> {
   final gridMap = Data();
   @override
   Widget build(BuildContext context) {
+//================ tap to detail ================//
+
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -22,6 +24,8 @@ class _ProductScreenState extends State<ProductScreen> {
             MaterialPageRoute(
                 builder: (context) => const DetailProductScreen()));
       },
+
+      //================ lIst view ===============//
       child: ListView.builder(
           shrinkWrap: true,
           primary: false,
@@ -31,12 +35,20 @@ class _ProductScreenState extends State<ProductScreen> {
               padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
               child: SizedBox(
                   height: 80,
+
+                  //==================== card Listtile ================//
+
                   child: Card(
                       child: ListTile(
-                    leading: Container(height: 40,width: 40,
-                      decoration: BoxDecoration(
+                    leading: Container(
+                      height: 40,
+                      width: 40,
+                      decoration: const BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.all(Radius.circular(10))),
+
+                      //=================== icon cart =================//
+
                       child: IconButton(
                           onPressed: () {
                             final snackBar = SnackBar(
@@ -47,14 +59,14 @@ class _ProductScreenState extends State<ProductScreen> {
                             ScaffoldMessenger.of(context)
                                 .showSnackBar(snackBar);
                           },
-                          icon: Icon(Icons.add_shopping_cart_outlined)),
+                          icon: const Icon(Icons.add_shopping_cart_outlined)),
                     ),
                     title: Text(
                       '${gridMap.gridMap[index]['title']}',
                       style: textSimplegrey,
                     ),
                     subtitle: Text(
-                      '${gridMap.gridMap[index]['price'] } LAK',
+                      '${gridMap.gridMap[index]['price']} LAK',
                       style: textSimplegrey,
                     ),
                   ))),

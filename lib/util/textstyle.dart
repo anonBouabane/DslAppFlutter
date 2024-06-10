@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 //==============styletextsimple==============
 
 const textSimple =
-    TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.w300);
+    TextStyle(fontSize: 12, color: Colors.black, fontWeight: FontWeight.w300);
     const textSimplegrey =
-    TextStyle(fontSize: 14, color: Colors.grey, fontWeight: FontWeight.bold);
-const textSimpleBold = TextStyle(fontSize: 14, fontWeight: FontWeight.bold);
+    TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.bold);
+const textSimpleBold = TextStyle(fontSize: 12, fontWeight: FontWeight.bold);
 const textsimpleWhite =
-    TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white);
+    TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white);
 
 //================styleTextTitle================
 
 const textTitlewhite =
-    TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white);
+    TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white);
 const textTitle =
-    TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black);
+    TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black);
  const textTitleGrey =
-    TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.grey);
+    TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.grey);
  

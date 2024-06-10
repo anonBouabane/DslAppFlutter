@@ -38,7 +38,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Column(
                   children: [
                     SizedBox(
-                        height: 100,
+                        height: 80,
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -69,7 +69,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         )),
                         SizedBox(
-                        height: 100,
+                        height: 80,
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -101,7 +101,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         )),
                     SizedBox(
-                        height: 100,
+                        height: 80,
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -133,7 +133,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         )),
                         SizedBox(
-                        height: 100,
+                        height: 80,
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -165,7 +165,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         )),
                     SizedBox(
-                        height: 100,
+                        height: 80,
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -196,7 +196,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         )),
                     SizedBox(
-                        height: 100,
+                        height: 80,
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -227,7 +227,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         )),
                     SizedBox(
-                        height: 100,
+                        height: 80,
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -258,7 +258,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         )),
                     SizedBox(
-                        height: 100,
+                        height: 80,
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
