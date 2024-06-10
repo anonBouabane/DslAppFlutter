@@ -48,7 +48,7 @@ class _CartScreenState extends State<CartScreen> {
                   primary: false,
                   itemBuilder: (context, index) {
                     return SizedBox(
-                      height: 90,
+                      height: 80,
 
                       // ================ card Listile  ==================//
                       child: Card(

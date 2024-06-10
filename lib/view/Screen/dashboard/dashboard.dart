@@ -65,7 +65,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 120),
+                      padding: EdgeInsets.symmetric(vertical: 135),
                       child: ProductScreen(),
                     ),
                   ],

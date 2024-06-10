@@ -13,6 +13,8 @@ class RegisterCustoScreen extends StatefulWidget {
 class _RegisterCustoScreenState extends State<RegisterCustoScreen> {
   DateTime _selectedDate = DateTime.now();
 
+  //=============== function DateTime ===========
+
   Future<void> _selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
       context: context,
@@ -33,6 +35,8 @@ class _RegisterCustoScreenState extends State<RegisterCustoScreen> {
         FocusScope.of(context).unfocus();
       },
       child: Scaffold(
+
+        //===================== header =================
         appBar: AppBar(
           actions: [
             IconButton(
@@ -46,7 +50,7 @@ class _RegisterCustoScreenState extends State<RegisterCustoScreen> {
                 icon: const Icon(
                   Icons.cloud_done_outlined,
                   color: Colors.white,
-                  size: 30,
+                  size: 25,
                 ))
           ],
           leading: IconButton(
@@ -63,6 +67,9 @@ class _RegisterCustoScreenState extends State<RegisterCustoScreen> {
           ),
           backgroundColor: Colors.blue,
         ),
+
+
+        //=============== content body ======================
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
