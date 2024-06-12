@@ -5,11 +5,13 @@ import 'package:flutter/material.dart';
 class TextFieldWidget extends StatelessWidget {
   dynamic keyboardType;
   String text;
+  double width;
 
   TextFieldWidget({
     super.key,
     required this.text,
     required this.keyboardType,
+    required this.width
   });
 
   @override
@@ -23,6 +25,7 @@ class TextFieldWidget extends StatelessWidget {
             decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(15))),
+                width: width,
             height: 50,
             child: TextFormField(
                 decoration: InputDecoration(
