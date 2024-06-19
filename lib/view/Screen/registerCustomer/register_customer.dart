@@ -1,6 +1,5 @@
 import 'package:dslsale/util/textstyle.dart';
 import 'package:dslsale/view/widget/text_formfield.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RegisterCustoScreen extends StatefulWidget {

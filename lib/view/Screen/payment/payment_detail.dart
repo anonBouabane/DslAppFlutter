@@ -2,7 +2,6 @@ import 'package:dslsale/data/data_dump.dart';
 import 'package:dslsale/util/images.dart';
 import 'package:dslsale/util/textstyle.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class PaymentDetailScreen extends StatefulWidget {
   const PaymentDetailScreen({super.key});

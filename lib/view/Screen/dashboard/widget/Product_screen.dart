@@ -2,7 +2,6 @@ import 'package:dslsale/data/data_dump.dart';
 import 'package:dslsale/util/textstyle.dart';
 import 'package:dslsale/view/Screen/dashboard/detailproduct/product_detail.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});
