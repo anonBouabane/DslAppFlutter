@@ -24,7 +24,6 @@ class AuthController extends ChangeNotifier {
 
         notifyListeners();
       }
-      notifyListeners();
     } catch (e) {
       navService.goBack();
       MessageHelper.showSnackBarMessage(

@@ -13,6 +13,7 @@ class LoginScreen extends StatefulWidget {
 
 TextEditingController username = TextEditingController();
 TextEditingController password = TextEditingController();
+final _formKeydata = GlobalKey<FormState>();
 
 class _LoginScreenState extends State<LoginScreen> {
   @override
@@ -33,79 +34,97 @@ class _LoginScreenState extends State<LoginScreen> {
                   fit: BoxFit.fill,
                 ),
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    "Login",
-                    style: TextStyle(
-                        fontSize: 36,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 50),
-                    child: Container(
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15)),
-                      child: TextFormField(
-                        controller: username,
-                        decoration: const InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "Enter username",
-                            contentPadding:
-                                EdgeInsets.symmetric(horizontal: 30)),
-                      ),
+              Form(
+                key: _formKeydata,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "Login",
+                      style: TextStyle(
+                          fontSize: 36,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 50),
-                    child: Container(
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15)),
-                      child: TextFormField(
-                        controller: password,
-                        decoration: const InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "Enter password",
-                            contentPadding:
-                                EdgeInsets.symmetric(horizontal: 30)),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 15, horizontal: 80),
-                    child: InkWell(
-                      onTap: () {
-                        value.login(
-                            username: username.text, password: password.text);
-                        loading(context);
-                      },
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 10, horizontal: 50),
                       child: Container(
                         height: 50,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.blueAccent),
-                        child: const Center(
-                            child: Text(
-                          "ເຂົ້າສູ່ລະບົບ",
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        )),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15)),
+                        child: TextFormField(
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return "username is required";
+                            }
+                            return null;
+                          },
+                          controller: username,
+                          decoration: const InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "Enter username",
+                              contentPadding:
+                                  EdgeInsets.symmetric(horizontal: 30)),
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 10, horizontal: 50),
+                      child: Container(
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15)),
+                        child: TextFormField(
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return "Password is required";
+                            }
+                            return null;
+                          },
+                          controller: password,
+                          decoration: const InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "Enter password",
+                              contentPadding:
+                                  EdgeInsets.symmetric(horizontal: 30)),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 80),
+                      child: InkWell(
+                        onTap: () async {
+                          if (_formKeydata.currentState!.validate()) {
+                            value.login(
+                                username: username.text,
+                                password: password.text);
+                            loading(context);
+                          }
+                        },
+                        child: Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.blueAccent),
+                          child: const Center(
+                              child: Text(
+                            "ເຂົ້າສູ່ລະບົບ",
+                            style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          )),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               )
             ],
           );
