@@ -1,4 +1,6 @@
-class Data {
+import 'package:flutter/material.dart';
+
+class Data extends ChangeNotifier {
   final List<Map<String, dynamic>> gridMap = [
     {
       "id": 1,
@@ -47,22 +49,26 @@ class Data {
       "title": "heiniken",
       "image": "assets/images/heiniken.jpeg",
       "price": "430.000"
-    }, {
+    },
+    {
       "id": 9,
       "title": "ສະຕິງ",
       "image": "assets/images/stings.jpeg",
       "price": "1.500.000"
-    }, {
+    },
+    {
       "id": 10,
       "title": "ສະຕິງ",
       "image": "assets/images/stings.jpeg",
       "price": "1.500.000"
-    }, {
+    },
+    {
       "id": 11,
       "title": "ສະຕິງ",
       "image": "assets/images/stings.jpeg",
       "price": "1.500.000"
-    }, {
+    },
+    {
       "id": 12,
       "title": "ສະຕິງ",
       "image": "assets/images/stings.jpeg",
@@ -169,6 +175,89 @@ class Data {
       "distric": "ສີໂຄດ",
       "province": "ນະຄອນຫລວງ",
       "date": "01/06/24"
+    }
+  ];
+  List<Map<String, dynamic>> infocusto = [
+    {
+      "id": "1",
+      "fullName": "aiy",
+      "phone": "123456",
+      "gender": "ຊາຍ",
+      "age": "21",
+      "address": "sikhod",
+      "image": "assets/images/profile.png"
+    },
+    {
+      "id": "2",
+      "fullName": "anon",
+      "phone": "123456",
+      "gender": "ຊາຍ",
+      "age": "22",
+      "address": "phonesavath",
+      "image": "assets/images/profile.png"
+    },
+    {
+      "id": "3",
+      "fullName": "lambo123",
+      "phone": "123456",
+      "gender": "ຍິງ",
+      "age": "55",
+      "address": "nonkhylek",
+      "image": "assets/images/profile.png"
+    },
+    {
+      "id": "4",
+      "fullName": "alex",
+      "phone": "123456",
+      "gender": "ຍິງ",
+      "age": "34",
+      "address": "sysavath",
+      "image": "assets/images/profile.png"
+    },
+    {
+      "id": "5",
+      "fullName": "Alien",
+      "phone": "123456",
+      "gender": "ຍິງ",
+      "age": "14",
+      "address": "phabard",
+      "image": "assets/images/profile.png"
+    },
+    {
+      "id": "6",
+      "fullName": "alisa",
+      "phone": "123456",
+      "gender": "ຊາຍ",
+      "age": "22",
+      "address": "donkey",
+      "image": "assets/images/profile.png"
+    },
+    {
+      "id": "7",
+      "fullName": "jay jay",
+      "phone": "123",
+      "gender": "ຊາຍ",
+      "age": "27",
+      "address": "dongmarkkhary",
+      "image": "assets/images/profile.png"
+    },
+    {
+      "id": "8",
+      "fullName": "milk",
+      "phone": "1220023",
+      "gender": "ຍີງ",
+      "age": "35",
+      "address": "vudtai",
+      "image": "assets/images/profile.png"
+    },
+    {
+      "id": "9",
+      "fullName": "kvin",
+      "phone": "778899",
+      "gender": "ຊາຍ",
+      "age": "43",
+      "address": "nongtaeng",
+      "image": "assets/images/profile.png"
     }
   ];
 }

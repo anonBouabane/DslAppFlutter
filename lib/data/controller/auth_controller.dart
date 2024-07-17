@@ -27,7 +27,7 @@ class AuthController extends ChangeNotifier {
     } catch (e) {
       navService.goBack();
       MessageHelper.showSnackBarMessage(
-          isSuccess: false, message: "username or password not found");
+          isSuccess: false, message: "username or password not match");
       _isloading = false;
 
       notifyListeners();

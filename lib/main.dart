@@ -1,5 +1,6 @@
 import 'package:dslsale/Routehelper/route_helper.dart';
 import 'package:dslsale/data/controller/auth_controller.dart';
+import 'package:dslsale/data/data_dump.dart';
 import 'package:dslsale/message/message.dart';
 import 'package:dslsale/view/splashsScreen/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,8 @@ import 'package:provider/provider.dart';
 void main() {
   // WidgetsFlutterBinding.ensureInitialized();
   runApp(MultiProvider(providers: [
-    ChangeNotifierProvider(create: (_)=>AuthController())
+    ChangeNotifierProvider(create: (_)=>AuthController()),
+    ChangeNotifierProvider(create: (_)=>Data())
 
   ],child:const MyApp(),));
 }

@@ -42,8 +42,10 @@ class _HistoryInvoiceState extends State<HistoryInvoice> {
           children: [
             GestureDetector(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) =>const InvoiceScreen()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const InvoiceScreen()));
               },
 
               //=============== list view ================//
@@ -52,7 +54,8 @@ class _HistoryInvoiceState extends State<HistoryInvoice> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 70,horizontal: 20),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 70, horizontal: 20),
                       child: ListView.builder(
                           primary: false,
                           shrinkWrap: true,
@@ -60,9 +63,9 @@ class _HistoryInvoiceState extends State<HistoryInvoice> {
                           itemBuilder: (context, index) {
                             return SizedBox(
                               height: 180,
-                      
+
                               //=============== card && Listile ================//
-                      
+
                               child: Card(
                                   child: ListTile(
                                 title: Column(
@@ -75,8 +78,9 @@ class _HistoryInvoiceState extends State<HistoryInvoice> {
                                     ),
                                     Row(
                                       //=============== status icon ================//
-                      
-                                      mainAxisAlignment: MainAxisAlignment.center,
+
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         Text(
                                           'ສະຖານະບິນ : ${mapData.history[index]['status']}',
@@ -96,8 +100,9 @@ class _HistoryInvoiceState extends State<HistoryInvoice> {
                                     ),
                                     Column(
                                       //=============== detail ================//
-                      
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Row(
                                           children: [

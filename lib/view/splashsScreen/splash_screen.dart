@@ -12,7 +12,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(const Duration(milliseconds: 10000), () {
+    Timer(const Duration(seconds: 1), () {
       Navigator.pushReplacementNamed(context, '/login');
       // Provider.of<AuthController>(context,listen: false).validateToken();
     });
@@ -47,7 +47,6 @@ class _SplashScreenState extends State<SplashScreen> {
               color: Color.fromARGB(255, 65, 236, 255),
               strokeWidth: 2,
               backgroundColor: Colors.white,
-              semanticsLabel: "asdas",
             )),
           )
         ],

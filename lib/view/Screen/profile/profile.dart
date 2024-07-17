@@ -64,11 +64,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     )
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
-                                  Icons.edit,
-                                  color: Colors.blueGrey,
-                                )
                               ],
                             ),
                           ),
@@ -97,11 +92,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     )
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
-                                  Icons.edit,
-                                  color: Colors.blueGrey,
-                                )
                               ],
                             ),
                           ),
@@ -131,11 +121,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     )
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
-                                  Icons.edit,
-                                  color: Colors.blueGrey,
-                                )
                               ],
                             ),
                           ),
@@ -165,11 +150,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     )
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
-                                  Icons.edit,
-                                  color: Colors.blueGrey,
-                                )
                               ],
                             ),
                           ),
@@ -198,11 +178,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     )
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
-                                  Icons.edit,
-                                  color: Colors.blueGrey,
-                                )
                               ],
                             ),
                           ),
@@ -232,11 +207,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     )
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
-                                  Icons.edit,
-                                  color: Colors.blueGrey,
-                                )
                               ],
                             ),
                           ),
@@ -266,11 +236,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     ),
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
-                                  Icons.edit,
-                                  color: Colors.blueGrey,
-                                )
                               ],
                             ),
                           ),
@@ -300,18 +265,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     )
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
-                                  Icons.edit,
-                                  color: Colors.blueGrey,
-                                )
                               ],
                             ),
                           ),
                         )),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
