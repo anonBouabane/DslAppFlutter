@@ -33,21 +33,23 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
     await printLogoImage();
 
     // Print bill text
-    await SunmiPrinter.printText(_billController.text, style: SunmiStyle(
-      fontSize: SunmiFontSize.MD,
-      bold: true,
-      align: SunmiPrintAlign.CENTER,
-    ));
+    await SunmiPrinter.printText(_billController.text,
+        style: SunmiStyle(
+          fontSize: SunmiFontSize.MD,
+          bold: true,
+          align: SunmiPrintAlign.CENTER,
+        ));
 
     // Print horizontal line
     await SunmiPrinter.line();
 
     // Print footer text
-    await SunmiPrinter.printText('Thank you for your business!', style: SunmiStyle(
-      fontSize: SunmiFontSize.SM,
-      bold: false,
-      align: SunmiPrintAlign.CENTER,
-    ));
+    await SunmiPrinter.printText('Thank you for your business!',
+        style: SunmiStyle(
+          fontSize: SunmiFontSize.SM,
+          bold: false,
+          align: SunmiPrintAlign.CENTER,
+        ));
 
     // await SunmiPrinter.stopTransactionPrint();
   }
@@ -74,7 +76,7 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Print Bill'),
+        title: const Text('Print Bill'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -83,20 +85,21 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
             TextField(
               controller: _billController,
               maxLines: 5,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Bill Text',
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: print.printInvoice,
-              child: Text('Print Bill'),
+              child: const Text('Print Bill'),
             ),
           ],
         ),
       ),
     );
   }
-  final print =InvoicePrinter();
+
+  final print = InvoicePrinter();
 }

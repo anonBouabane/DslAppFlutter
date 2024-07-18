@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-
 import 'package:flutter/services.dart';
 import 'package:sunmi_printer_plus/enums.dart';
 import 'package:sunmi_printer_plus/sunmi_printer_plus.dart';
@@ -13,62 +11,44 @@ class InvoicePrinter {
     await SunmiPrinter.startTransactionPrint(true);
 
     // Print logo image
-    await printLogoImage();
 
     // Print invoice header
-    await SunmiPrinter.printText('Tax Invoice', style: SunmiStyle(
-      fontSize: SunmiFontSize.MD,
-      bold: true,
-      align: SunmiPrintAlign.CENTER,
-    ));
+    await SunmiPrinter.printText('ໃບບິນເກັບເງິນ',
+        style: SunmiStyle(
+          fontSize: SunmiFontSize.XL,
+          bold: true,
+          align: SunmiPrintAlign.CENTER,
+        ));
 
     // Print store information
-    await SunmiPrinter.printText('Main Branch', style: SunmiStyle(
-      fontSize: SunmiFontSize.MD,
-      bold: true,
-      align: SunmiPrintAlign.CENTER,
-    ));
-    await SunmiPrinter.printText('London', style: SunmiStyle(
-      fontSize: SunmiFontSize.SM,
-      bold: false,
-      align: SunmiPrintAlign.LEFT,
-    ));
+    await SunmiPrinter.printText('ຢາສະຫົວ',
+        style: SunmiStyle(
+          fontSize: SunmiFontSize.MD,
+          bold: true,
+          align: SunmiPrintAlign.LEFT,
+        ));
+    await SunmiPrinter.printText('London',
+        style: SunmiStyle(
+          fontSize: SunmiFontSize.SM,
+          bold: false,
+          align: SunmiPrintAlign.LEFT,
+        ));
 
     // Print horizontal line
     await SunmiPrinter.line();
 
     // Print invoice items
-    await SunmiPrinter.printText('Item 1', style: SunmiStyle(
-      fontSize: SunmiFontSize.SM,
-      bold: false,
-      align: SunmiPrintAlign.LEFT,
-    ));
-    await SunmiPrinter.printText('£10.00', style: SunmiStyle(
-      fontSize: SunmiFontSize.SM,
-      bold: false,
-      align: SunmiPrintAlign.RIGHT,
-    ));
 
     // Print total
-    await SunmiPrinter.printText('Total: £10.00', style: SunmiStyle(
-      fontSize: SunmiFontSize.MD,
-      bold: true,
-      align: SunmiPrintAlign.CENTER,
-    ));
+    await SunmiPrinter.printText('Total: £10.00',
+        style: SunmiStyle(
+          fontSize: SunmiFontSize.MD,
+          bold: true,
+          align: SunmiPrintAlign.CENTER,
+        ));
 
     // End the transaction
     // await SunmiPrinter.endTransactionPrint();
-  }
-
-  Future<void> printLogoImage() async {
-    await SunmiPrinter.lineWrap(1);
-    Uint8List byte = await _getImageFromAsset('assets/Group.png');
-    await SunmiPrinter.printImage(byte);
-    await SunmiPrinter.lineWrap(1);
-  }
-
-  Future<Uint8List> _getImageFromAsset(String iconPath) async {
-    return await readFileBytes(iconPath);
   }
 
   Future<Uint8List> readFileBytes(String path) async {
