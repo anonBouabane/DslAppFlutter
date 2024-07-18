@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:dslsale/view/Screen/printBill/printinvoice.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sunmi_printer_plus/enums.dart';
@@ -89,7 +90,7 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
             ),
             SizedBox(height: 16),
             ElevatedButton(
-              onPressed: _printBill,
+              onPressed: print.printInvoice,
               child: Text('Print Bill'),
             ),
           ],
@@ -97,4 +98,5 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
       ),
     );
   }
+  final print =InvoicePrinter();
 }
