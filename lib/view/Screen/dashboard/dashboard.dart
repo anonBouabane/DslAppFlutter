@@ -58,7 +58,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                       Row(
                         children: [
                           Text(
-                            'active',
+                            'Active',
                             style: textsimpleWhite,
                           ),
                           Padding(
@@ -66,10 +66,10 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                             child: CircleAvatar(
                               minRadius: 3,
                               backgroundColor:
-                                  Color.fromARGB(255, 146, 243, 150),
+                                  Color.fromARGB(255, 116, 227, 119),
                               child: Icon(
                                 Icons.check_circle_outlined,
-                                size: 20,
+                                size: 16,
                                 color: Colors.white,
                               ),
                             ),
@@ -91,13 +91,13 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                         builder: (context) => const LoginScreen()));
               },
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(
+                padding: const EdgeInsets.all(6.0),
+                child: CircleAvatar(radius: 16,
                   backgroundColor: Colors.white,
                   child: Image.asset(
                     Images.exitapp,
                     color: Colors.black,
-                    scale: 1.8,
+                    scale: 2,
                   ),
                 ),
               ),
@@ -135,6 +135,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              //===========>> purchase product <<============
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: GestureDetector(
@@ -171,6 +172,8 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                   ),
                                 ),
                               ),
+
+                              //===============>>> register customer <<<<===============
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: GestureDetector(
@@ -207,6 +210,8 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                   ),
                                 ),
                               ),
+
+                              //===============>> customer info <<=============
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: GestureDetector(
@@ -249,6 +254,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
+                                //=================>>> print invoice <<<<=============
                                 padding: const EdgeInsets.all(8.0),
                                 child: GestureDetector(
                                   onTap: () {
@@ -276,7 +282,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                           color: Colors.blue,
                                         ),
                                         Text(
-                                          'ລາຍການພິມບິນ',
+                                          'ລາຍການສັ່ງຊື້',
                                           style: textSimplegrey,
                                         )
                                       ],
@@ -284,6 +290,8 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                   ),
                                 ),
                               ),
+
+                              //===========>>> cart widget <<============
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: GestureDetector(
@@ -320,6 +328,8 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                   ),
                                 ),
                               ),
+
+                              //===============>>>Profile widget<<===========
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: GestureDetector(
@@ -385,7 +395,6 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                       Text(
                         "DSL",
                         style: TextStyle(
-                            fontFamily: 'Demo_ConeriaScript_Slanted.ttf',
                             fontSize: 35,
                             fontWeight: FontWeight.bold,
                             color: Color.fromARGB(255, 106, 189, 231)),
